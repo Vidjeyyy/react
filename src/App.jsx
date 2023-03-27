@@ -1,12 +1,17 @@
 import MyTitle from "./components/MyTitle"
+import PokemonCard from "./components/PokemonCard"
 
+console.log(PokemonCard);
 
 function App() {
   return (
     <div>
-      <h1>Hello world</h1>
+
+      <PokemonCard />
     </div>
-  )
+  );
 }
+
+
 
 export default App
