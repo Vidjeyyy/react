@@ -1,12 +1,18 @@
+import PropTypes from "prop-types";
 
-function PokemonCard(props) {
+function PokemonCard({ name, imgSrc }) {
 
-    console.log(props);
 
     return <figure>
-        {props.imgSrc === undefined ? <p>???</p> : <img src={props.imgSrc} />}
-        <figcaption>{props.name}</figcaption>
+        {imgSrc === undefined ? <p>???</p> : <img src={imgSrc} />}
+        <figcaption>{name}</figcaption>
     </figure>
+
+}
+
+PokemonCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
 
 }
 
