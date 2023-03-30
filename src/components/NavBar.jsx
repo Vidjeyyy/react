@@ -1,10 +1,11 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 
 
 
 function NavBar({ pokemonList, setIndex, index }) {
-    let handleClick = () => {
+
+
+    /*let handleClick = () => {
         setIndex((prevIndex) => (prevIndex + 1) % pokemonList.length);
 
     }
@@ -13,14 +14,25 @@ function NavBar({ pokemonList, setIndex, index }) {
             (index === 0) ? setIndex((prevIndex) => (prevIndex + (pokemonList.length - 1))) :
                 setIndex((prevIndex) => (prevIndex - 1) % pokemonList.length);
         }
+    }*/
 
 
-    }
-    //const pokemon = pokemonList[index];
+
+
+
+
+
+
 
     return <div>
-        <button onClick={handleOnClick}>Precedent</button>
-        <button onClick={handleClick}>Suivant</button>
+
+
+        {pokemonList.map((pokemon, index) => (
+
+            <button key={pokemon.name} onClick={() => { setIndex(index) }}>{pokemon.name}</button>
+
+        ))}
+
     </div>
 
 
